@@ -5,6 +5,11 @@
 #### --> npm install
 #### --> npm run start:dev
 
+#### obs: Precisamos que o back-end esteja rodando também, então segue os comandos para iniciar o back-end: 
+#### --> npm install
+#### --> npm start
+
+
 ## Funcionalidades
 
 ### Não Autenticados
