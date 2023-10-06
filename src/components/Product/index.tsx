@@ -38,24 +38,26 @@ export function Product(data: ProductProps) {
       </div>
       <div className="mt-1 flex flex-col gap-2">
         <span className="text-xl">{data.name}</span>
-        {!data.promotionPrice ? (
-          <span className="text-xl text-green-800 ">
-            R$ {data.price.toFixed(2)}
-          </span>
-        ) : (
-          <div className="flex flex-col">
-            <span className="text-gray-500/70 line-through">
+        <div className='flex justify-between items-center'>
+          {!data.promotionPrice ? (
+            <span className="text-xl text-green-800 ">
               R$ {data.price.toFixed(2)}
             </span>
-            <span className="from-neutral-300 text-xl text-green-800">
-              R$: {data.promotionPrice.toFixed(2)}
-            </span>
-          </div>
-        )}
+          ) : (
+            <div className="flex flex-col">
+              <span className="text-gray-500/70 line-through">
+                R$ {data.price.toFixed(2)}
+              </span>
+              <span className="from-neutral-300 text-xl text-green-800">
+                R$: {data.promotionPrice.toFixed(2)}
+              </span>
+            </div>
+          )}
 
-        <span className="text-gray-500/70">
-          Validade: {new Date(data.validity).toLocaleDateString('pt-BR')}
-        </span>
+          <span className="text-gray-500/70 text-xs">
+            V.: {new Date(data.validity).toLocaleDateString('pt-BR')}
+          </span>
+        </div>
       </div>
     </div>
   )
